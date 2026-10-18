@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f0f0f0;
+}
+
+.face-nav {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+}
+
+.face-nav button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  font: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.face-nav button:hover {
+  background: #444;
+}
+
+.face-nav {
+  align-items: center;
+}
+
+.face-nav-current {
+  min-width: 70px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.loading {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Info panels floating over the cube faces */
+.face-panel {
+  width: 480px;
+  height: 480px;
+  padding: 24px;
+  overflow: hidden;
+  border-radius: 16px;
+  font: 16px/1.35 sans-serif;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+  user-select: none;
+}
+
+.face-panel.visible {
+  opacity: 1;
+}
+
+.face-panel.visible a {
+  pointer-events: auto;
+}
+
+.face-panel h1,
+.face-panel h2,
+.face-panel h3 {
+  margin: 0 0 10px;
+}
+
+.face-panel h3 {
+  font-size: 24px;
+}
+
+.face-panel p {
+  margin: 0 0 10px;
+}
+
+.face-panel ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.face-panel .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.face-panel .intro h1 {
+  font-size: 50px;
+  line-height: 1.1;
+}
+
+.face-panel .intro h2 {
+  font-size: 22px;
+  font-weight: normal;
+  opacity: 0.85;
+}
+
+.face-panel .job {
+  margin-bottom: 14px;
+}
+
+.face-panel .job-meta {
+  margin-bottom: 6px;
+  opacity: 0.7;
+}
+
+.face-panel .link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.face-panel .link:hover {
+  text-decoration: underline;
+}
+
+.face-panel .projects p {
+  margin-bottom: 8px;
+}
+
+.face-panel .projects span {
+  display: block;
+  padding-left: 28px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.face-panel .contact .link {
+  margin-bottom: 12px;
+}
+
+.face-panel .skills p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.face-panel .panel-title {
+  margin: 0 0 12px;
+  font-size: 30px;
+}
